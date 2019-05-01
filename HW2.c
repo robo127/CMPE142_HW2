@@ -380,7 +380,7 @@ int main(void)
 	isSwitched=false;
 	completed=0;
 	int shortest=0;
-	int slice = 1;
+	int slice = 2;
 	bool isJobsDone=false;
 	bool didRun=false;
 
@@ -444,7 +444,7 @@ int main(void)
 			else
 				isJobsDone = true;
 		}
-		if(didRun==false)
+		if(didRun==false&&time==0)
 			time=arrival[0];
 		if(isJobsDone==true)
 			break;
@@ -494,5 +494,4 @@ int main(void)
 		free(line);
 	exit(EXIT_SUCCESS);
 }
-
 
